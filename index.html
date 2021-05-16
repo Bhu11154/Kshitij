@@ -1,0 +1,967 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant | Naruto</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        .container2{
+            display: flex;
+            padding-top: 10px;
+        }
+
+
+        #homesection{
+            background-color: #FFF4F2;
+            width: 700px;
+            height:680px;
+            float: left;
+            margin-top: 40px;
+        }
+
+        .imglogo img{
+            padding: 5px 0px 0 30px;
+            float: left;
+        }
+
+        #name{
+            padding: 10px 40px 0 20px;
+            font-size: 2.4em;
+            float: left;
+            font-weight: bold;
+        }
+
+        .homeitems ul{
+            padding: 0;
+            margin: 0;
+        }
+
+        .homeitems li{
+            float: left;
+            font-weight: bold;
+            color: #4D312C;
+            padding: 20px 10px 0 10px;
+            list-style: none;
+            font-size: 1.2em;
+        }
+        #homeimg img{
+            padding-left: 0;
+            padding-top: 40px;
+            width: 650px;
+            height: 680px;
+            clear: both;
+        }
+        .homeitems a{
+            text-decoration: none;
+            color: #4D312C;
+        }
+        .homeitems a:hover{
+            color: orange;
+            text-decoration: none;
+        }
+        .homeitems a:visited{
+            text-decoration: none;
+        }
+        .break{
+            clear: both;
+        }
+        #hometext{
+            padding: 200px 30px 0 110px;
+            font-size: 4em;
+            font-weight: bold;
+            color: #4D312C;
+        }
+        .downtext{
+            font-size: 1.7em;
+            color: #4D312C;
+            padding-left: 110px;
+            padding-right: 30px;
+        }
+        .menubutton button{
+            background-color: #FE5F41;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 190px;
+            height: 50px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            border: none;
+        }
+        .menubutton button:active{
+            color: white;
+        }
+        .menubutton button:focus{
+            background-color: green;
+        }
+        .add:focus{
+            background-color: green;
+        }
+        .menubutton button:hover{
+            background-color: #A0522D;
+        }
+        .menubutton a{
+            text-decoration: none;
+            color: #4D312C;
+        }
+        .menubutton{
+            padding-left: 110px;
+            padding-right: 50px;
+            float: left;
+        }
+        #video{
+            padding-top: 10px;
+            padding-right: 1px;
+            float: left;
+        }
+        .tex{
+            padding: 15px 0 0 10px;
+            color: #FE5F41;
+            font: 2.5em;
+            font-weight: bold;
+        }
+        #section2{
+            width: 100%;
+            height: 350px;
+            background-color: #FFFFFF;
+        }
+        .info{
+            padding: 100px 0 0 400px;
+            font-size: 2.75em;
+            font-weight: bold;
+            color: #4D312C;
+        }
+        #smallinfo{
+            font-size: 1.7em;
+            color: #948193;
+            padding: 30px 400px 0px 400px;
+            text-align: center;
+        }
+        .cards img{
+            width: 90px;
+            height: 90px;
+            align-items: center;
+            padding: 30px 0 0 100px;
+        }
+        .cards{
+            border: 2px solid #948193;
+            padding-right: 10px;
+            padding-left: 10px;
+            border-radius: 4px;
+            width: 22%;
+            margin-right: 20px;
+        }
+        #section3{
+            display: flex;
+            margin-left: 20px;
+            padding-bottom: 100px;
+        }
+        .des{
+            margin-top: 20px;
+            text-align: center;
+            color: #948193;
+            font-size: 1.1em;
+
+        }
+        .fooditem{
+            text-align: center;
+            font-weight: bold;
+            color: #4D312C;
+            font-size: 2em;
+        }
+        .add{
+            background-color: #FE5F41;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            border: none;
+            margin-left: 220px;
+            margin-bottom: 20px;
+        }
+        .add:hover{
+            background-color: #6C473A;
+        }
+        .add a{
+            text-decoration: none;
+            color: #4D312C;
+        }
+
+        #section4{
+            background-color: #4C322D;
+            width: 100%;
+            height: 1120px;
+        }
+        #search{
+            width: 300px;
+            padding-left: 30px;
+            border-radius: 30px;
+            height: 30px;
+            margin-top: -40px;
+            border-style: none;
+            background-color: #FFFFFF;
+            background-image: url("https://img.icons8.com/search");
+            background-size: 25px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+        #searchbar{
+            margin-top: -30px;
+            margin-left: 200px;
+            margin-right: 100px;
+            float: right;
+        }
+
+        #textinfo{
+            font-size: 2.5em;
+            font-weight: bold;
+            padding-left: 150px;
+            padding-top : 80px;
+            color: #FFFFFF;
+        }
+
+        .list ul{
+            list-style: none;
+            padding-left: 150px;
+            padding-top: 40px;
+        }
+        .list li{
+            float: left;
+            padding-right: 20px;
+            font-size: 1.5em;
+            color: #FE5F41;
+            font-weight: bold;
+        }
+        .break hr{
+            width: 1050px;
+        }
+        .list a:hover{
+            color: #FFFFFF;
+        }
+        .list a{
+            text-decoration: none;
+            color: #FE5F41;
+        }
+        .cards2{
+            border: 0.5px solid #948193;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 6px;
+            width: 22%;
+            margin-right: 20px;
+            background-color: white;
+            justify-content: center;
+        }
+
+        .cards2 img{
+            width: 150px;
+            height: 150px;
+            align-items: center;
+            padding: 30px 0 0 45px;
+        }
+        #cardssection4{
+            display: flex;
+            padding-left: 280px;
+        }
+        .fooditem2{
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            font-size: 2em;
+        }
+        .order{
+            padding-left: 70px;
+        }
+        .order a{
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #FE5F41;
+        }
+        .order a:hover{
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #FE5F41;
+        }
+        .order a:visited{
+            text-decoration: none;
+        }
+        #cardssection5{
+            display: flex;
+            padding-left: 280px;
+        }
+        #reviewsection{
+            display: flex;
+        }
+        #part1{
+            width: 50%;
+            height: 750px;
+        }
+        #reviewcard{
+            display: flex;
+            padding-left: 60px;
+        }
+        #part2{
+            width: 50%;
+            height: 750px;
+        }
+        .rcard{
+            border: 0.5px solid #948193 ;
+            height: 300px;
+            margin-top: 50px;
+            border-radius: 3px;
+            padding-bottom: 10px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .rcard img{
+            width: 90px;
+            height: 90px;
+            align-items: center;
+            padding: 20px 0 0 80px;
+        }
+        .rinfo{
+            padding-bottom: 20px;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #948193;
+            font-size: 1.1em;
+        }
+
+        .name{
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            font-size: 2em;
+        }
+
+        .checked {
+            color: orange;
+        }
+        #cus{
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4D312C;
+            text-align: center;
+            padding-left: 30px;
+        }
+        .cr{
+            padding: 5px 0 0 100px;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4D312C;
+        }
+
+        #formr{
+            padding-left: 110px;
+        }
+        #formr input{
+            width: 300px;
+            height: 40px;
+            border-radius: 15px;
+            border: 1px solid #FE5F41;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 0.9em;
+        }
+        
+        .rev{
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #948193;
+        }
+        .reviewbox{
+            font-size: 1.3em;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #resimg{
+            display: flex;
+            padding-left: 5px;
+        }
+        .image img{
+            width: 335px;
+        }
+        .footer{
+            background-color: #FFF7F3;
+            width: 100%;
+            height: 400px;
+            display: flex;
+        }
+
+        #c1{
+            width: 40%;
+            background-color: #FFF4F2;
+        }
+        .c2{
+            width: 15%;
+            background-color: #FFF4F2;
+        }
+        #c3{
+            width: 15%;
+            background-color: #FFF4F2;
+        }
+        #c4{ 
+            width: 30%;
+            background-color: #FFF4F2;
+        }
+
+        .footerimg{
+            padding: 70px 0 0px 110px;
+            float: left;
+        }
+        #name2{
+            padding: 75px 0 0px 20px;
+            font-size: 2em;
+            float: left;
+        }
+
+        #fpara{
+            padding-left: 110px;
+            padding-right: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        #navbar{
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            background-color: #FFF4F2;
+        }
+
+        #con{
+            padding-right: 200px;
+        }
+
+        .corner{
+            padding-top: 18px;
+            display: flex;
+        }
+        #book{
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #4D312C;
+        }
+        .fa-twitter {
+            background: #FE5F41;
+            color: white;
+        }
+        .footicons li{
+            list-style: none;
+        }
+
+        .fa-facebook {
+            background: #FE5F41;
+            color: white;
+        }
+        .fa-linkedin {
+            background: #FE5F41;
+            color: white;
+        }
+        .fa-pinterest {
+            background: #FE5F41;
+            color: white;
+        }
+        #social{
+            padding-left: 110px;
+        }
+        #social li{
+            padding-right: 15px;
+            float: left;
+        }
+
+        .lis{
+            padding-left: 20px;
+        }
+        .c2 li{
+            color: #4D312C;
+            padding-bottom: 10px;
+            list-style: none;
+            font-size: 1.2em;
+        }
+        .c2 a{
+            text-decoration: none;
+            color: #4D312C;
+        }
+        .c2 a:hover{
+            color: orange;
+            text-decoration: none;
+        }
+        .c2 a:visited{
+            text-decoration: none;
+        }
+        .ql{
+            padding-left: 60px;
+            padding-top: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .c2{
+            padding-left: 30px;
+        }
+
+        #last{
+            padding-top: 30px;
+        }
+        #t{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .ad{
+            font-size: 1.3em;
+            color: #4D312C; 
+        }
+        #num{
+            color: #FE5F41;
+            font-size: 1.6em;
+        }
+        #eid{
+            color: #FE5F41;
+            font-size: 1em;
+        }
+        #bottom{
+            padding-left: 400px;
+            background-color: #FFF4F2;
+            font-size: 1.2em;
+            color: #4D312C;
+            display: flex;
+        }
+        #copy{
+            padding-right: 200px;
+        }
+
+        .lin a{
+            text-decoration: none;
+            color: #FE5F41;
+        }
+        .lin a:hover{
+            font-size: 1.2em;
+            color: #4D312C;
+        }
+        .lin a:visited{
+            text-decoration: none;
+        }
+        .tex a{
+            text-decoration: none;
+            color: #FE5F41;
+        }
+        .tex a:hover{
+            font-size: 1.2em;
+            color: #4D312C;
+        }
+        .tex a:visited{
+            text-decoration: none;
+        }
+        #book a{
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #4D312C;
+        }
+        #book a:hover{
+            font-size: 1.2em;
+            color: #FE5F41;
+        }
+        #book a:visited{
+            text-decoration: none;
+        }
+        #line{
+            height: 2px;
+            background-color: #FE5F41;
+        }
+        .price{
+            margin-left: 120px;
+            font-size: 1.5em;
+            color: #4D312C;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="navbar">
+            <div id="homebar">
+
+                <div class="imglogo">
+
+                    <img src="https://img-premium.flaticon.com/png/512/562/562678.png?token=exp=1621088175~hmac=9705f8440d2ab7baedc00ae995e27b76" width="50px" height="50px">
+
+                </div>
+
+                <div id="name">
+                    NarutoRes
+                </div>
+
+                <div class="homeitems">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="#section4">Menu</a></li>
+                        <li><a href="#bottom">About</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li id="con"><a href="#bottom">Contact</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="corner">
+                <div id="book">
+                    <a href="#section2">Book Now</a>
+                    <hr id="line">
+                </div>
+
+                <div class="menubutton">
+                        <button id="number"><i class="fa fa-phone" aria-hidden="true"></i>  +10 (78) 738-9083</a></button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="container2">
+        <div id="homesection">
+
+            <div class="break"></div>
+            <div id="hometext">
+                Meet, Eat & Enjoy<br/>
+                the true taste
+            </div>
+            <br/>
+
+            <div class="downtext">
+                Making reservations at NarutoRes is easy and takes just a couple of minutes.
+            </div>
+            <br/>
+
+            <div class="menubutton">
+                <button><a href="#section2">Menu</a></button>
+            </div>
+
+            <div id="video">
+                <a href=""><img src="imgs/play.png" width="30px" height="30px"></a>
+            </div>
+
+            <div class="tex">
+                <a href="https://www.youtube.com">Watch Video</a>
+            </div>
+        </div>
+
+        <div id="homeimg">
+            <img src="https://preview.colorlib.com/theme/restauco/assets/img/hero/xh1_hero1.jpg.pagespeed.ic.fuDZbbOsws.webp">    
+        </div>
+    </div>
+    </div>
+
+    <div id="section2">
+        <div class="break"></div>
+        <div class="info">
+            Best way to eat healthy food
+        </div>
+
+        <div id="smallinfo">
+            Making reservations at NarutoRes is easy and takes just a couple of minutes.
+        </div>
+    </div>
+
+    <div id="section3">
+            <div class="cards">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/icon/services1.svg">
+                <p class="fooditem">Salad</p>
+                <p class="des">Start your meal with something healthy.</p>
+                <div class="price">$ 20.0</div>
+                <button class="add"><a href="#section2">+</a></button>
+            </div>
+            <div class="cards">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/icon/services2.svg">
+                <p class="fooditem">Burger</p>
+                <p class="des">Be fast and grab our Fastfoods.</p>
+                <div class="price">$ 10.0</div>
+                <button class="add"><a href="#section2">+</a></button>
+            </div>
+            <div class="cards">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/icon/services3.svg">
+                <p class="fooditem">Coffee</p>
+                <p class="des">Time for some hot n sweet coffee.</p>
+                <div class="price">$ 15.0</div>
+                <button class="add"><a href="#section2">+</a></button>
+            </div>
+            <div class="cards">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/icon/services1.svg">
+                <p class="fooditem">Veggies</p>
+                <p class="des">Don't run away from them, they are as good as you.</p>
+                <div class="price">$ 30.0</div>
+                <button class="add"><a href="#section2">+</a></button>
+            </div>
+    </div>
+
+    <div id="section4">
+
+        <div id="textinfo">
+            Here are some recommendations!!
+        </div>
+        
+        <div id="searchbar">
+            <input id="search">
+            </input>
+        </div>
+
+        <div class="list">
+        <ul>
+            <li><a href="">Breakfast</a></li>
+            <li><a href="">Lunchs</a></li>
+            <li><a href="">Dinner</a></li>
+            <li><a href="">Drinks</a></li>
+            <li><a href="">Fastfood</a></li>
+        </ul>
+        </div>
+
+        <div class="break">
+            <br><hr><br><br>
+        </div>
+
+        <div id="cardssection4">
+            <div class="cards2">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xpro-items1.jpg.pagespeed.ic.9H0itSogqk.webp">
+                <p class="fooditem2">Sandwich</p>
+                <p class="des">Here is the best selling 5-layer Sandwich. </p>
+                <p class="order"><a href="">Order Now</a></p>
+                <hr width="100px">
+            </div>
+            <div class="cards2">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xpro-items3.jpg.pagespeed.ic.zgsc8l8zhI.webp">
+                <p class="fooditem2">Hamburger</p>
+                <p class="des"> Searching for a Hamburger? You landed the right place!</p>
+                <p class="order"><a href="">Order Now</a></p>
+                <hr width="100px">
+            </div>
+            <div class="cards2">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xpro-items2.jpg.pagespeed.ic.InCMm5RIdj.webp">
+                <p class="fooditem2">Tuna Steak</p>
+                <p class="des">Get ready for some sea-dishes n Enjoy!</p>
+                <p class="order"><a href="">Order Now</a></p>
+                <hr width="100px">
+            </div>
+        </div>
+        <br>
+        <div id="cardssection5">
+            <div class="cards2">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xpro-items2.jpg.pagespeed.ic.InCMm5RIdj.webp">
+                <p class="fooditem2">Pizza</p>
+                <p class="des">Fastfood lovers you will love theese!<p>
+                <p class="order"><a href="">Order Now</a></p>
+                <hr width="100px">
+            </div>
+
+            <div class="cards2">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xpro-items1.jpg.pagespeed.ic.9H0itSogqk.webp">
+                <p class="fooditem2">Pancakes</p>
+                <p class="des">Hunger for sweet you have our Pancakes.</p>
+                <div class="order"><a href="">Order Now</a></div>
+                <hr width="100px">
+            </div>
+
+            <div class="cards2">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xpro-items3.jpg.pagespeed.ic.zgsc8l8zhI.webp">
+                <p class="fooditem2">Lobster</p>
+                <p class="des">Tasty Lobesters ready for you. Grab them!</p>
+                <p class="order"><a href="">Order Now</a></p>
+                <hr width="100px">
+            </div>
+        </div>
+
+        <div class="break"><br><br><br>
+
+        <div id="reviewsection">
+
+            <div id="part1">
+
+                <p id="cus"> What our Customers say :)</p>
+            <div id="reviewcard">
+                <div class="rcard">
+
+                    <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xcustomer3.jpg.pagespeed.ic.SbxzcMV5-B.webp">
+                    <p class="name">Lisa</p>
+                    <p class="rinfo">Love this food and being here.<br><br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </p>
+                    <br>
+
+                </div>
+
+                <div class="rcard">
+
+                    <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xcustomer2.jpg.pagespeed.ic.JrtHIY54A1.webp">
+                    <p class="name">Sakura</p>
+                    <p class="rinfo">No Words,just saviour the taste!<br><br>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </p>
+                    <br>
+
+                </div>
+            </div>
+
+
+            </div>
+
+            <div id="part2">
+                <p class="cr">What do you think ?</p>
+                <form id="formr">
+                    <div id="cname">
+                    <label><p class="rev">Name</p></label>
+                    <input type="text" placeholder="Name..">
+                    </div>
+
+                    <div id="cemail">
+                    <label><p class="rev">Email</p></label>
+                    <input type="text" placeholder="Email..">
+                    </div>
+
+                    <div id="cname">
+                    <label><p class="rev">Mobile No.</p></label>
+                    <input type="text" placeholder="Mobile no..">
+                    </div>
+
+                    <div id="cname">
+                    <label><p class="rev">Your opinion</p></label>
+                    <textarea class="reviewbox" cols="45" rows="5" placeholder=" Your Review"></textarea>
+                    </div>
+                    <br><br>
+                    <div class="menubutton">
+                        <button><a href="">Submit</a></button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <br><br>
+
+        <div id="resimg">
+
+            <div class="image">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xinstra3.jpg.pagespeed.ic.zEBAIp_Rmx.webp">
+            </div>
+
+            <div class="image">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xinstra1.jpg.pagespeed.ic.virRQfsSPW.webp">
+            </div>
+
+            <div class="image">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xinstra2.jpg.pagespeed.ic.RJ4yYFnogQ.webp">
+            </div>
+
+            <div class="image">
+                <img src="https://preview.colorlib.com/theme/restauco/assets/img/gallery/xinstra4.jpg.pagespeed.ic.eO3g5zu8U0.webp">
+            </div>
+
+
+        </div>
+
+        <div class="footer">
+
+            <div id="c1">
+                
+                <div class="footerimg">
+
+                    <img src="https://img-premium.flaticon.com/png/512/562/562678.png?token=exp=1621088175~hmac=9705f8440d2ab7baedc00ae995e27b76" width="50px" height="50px">
+
+                </div>
+
+                <div id="name2">
+                    NarutoRes
+                </div>
+
+                <div class="break"></div>
+
+                <br>
+
+                <p id="fpara">Hi there!I know this webpage is not up to the mark and is best viewed on 13inch screen: ( please bear with it </p>
+
+                <div class="footicons">
+                    <ul id="social">
+                        <li><a href="https://www.twitter.com" target="_blank" class="fa fa-twitter"></a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a></li>
+                        <li><a href="https://www.pinterest.com" target="_blank" class="fa fa-pinterest"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="c2">
+                <p class="ql">Quick Links</p>
+                <br>
+                <ul>
+                    <li><a href="#homesection" class="lis">Home</a></li>
+                    <li><a href="#footer" class="lis">About</a></li>
+                    <li><a href="#footer" class="lis">Services</a></li>
+                    <li><a href="#footer" class="lis">Blog</a></li>
+                    <li><a href="#footer" class="lis">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="c2">
+                <p class="ql">Cakes</p>
+                <br>
+                <ul>
+                    <li><a href="#homesection" class="lis">Blackforest</a></li>
+                    <li><a href="#homesection" class="lis">Vannila</a></li>
+                    <li><a href="#homesection" class="lis">Pineapple</a></li>
+                    <li><a href="#homesection" class="lis">Butterscotch</a></li>
+                    <li><a href="#homesection" class="lis">Chocolate</a></li>
+                </ul>
+            </div>
+
+            <div id="c4">
+                <br>
+                <div id="last">
+                    <p id="t">Contact Us</p>
+                    <br><br>
+                    <span class="ad">76/A, Green Lane, Dhanmondi,</span>
+                    <br>
+                    <span class="ad">NYC</span>
+                    <p id="num" class="lin"><a href="">+10 (78) 738-9083</a></p>
+                    <p id="eid" class="lin"><a href="https://www.gmail.com">restaurco89@gmail.com</a></p>
+                </div>
+            </div>
+            
+        </div>
+        <div id="bottom">
+            <div id="copy">Copyright ©2021 All rights reserved | This webpage was made by Bhuvan :)</div>
+        <div>
+            <a href="#homesection"><i class="fa fa-arrow-circle-up" style="font-size: 50px; color: #FE5F41; margin-bottom:10px;"></i></a>
+        </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
